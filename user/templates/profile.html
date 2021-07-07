@@ -1,0 +1,161 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="{% static 'passengers/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'user/lib/flaticon/font/flaticon.css' %}" rel="stylesheet"> 
+    <link href="{% static 'user/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'user/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'user/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'user/lib/slick/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'user/lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'user/css/style.css' %}" rel="stylesheet" type="text/css">
+    <title>{% trans 'User Profile' %}</title>
+  </head>
+  <body style="background-color: #fdbe33;">
+
+    {% if request.user.driver%}
+    <div class="feature wow fadeInUp" data-wow-delay="0.2s">
+      <div class="container">
+          <div class="cow align-items-center">
+              <div class="col-lg-14 col-md-12">
+                  <div class="feature-item">
+
+                      <div class="feature-text" >
+                        <img class="rounded-circle" src="{{user.driver.image.url}}" alt="{{user.username}}">
+                        <p>{% trans 'Username: ' %}{{user.username}}</p>
+                        <br>
+                        <p>{{user.first_name}} {{user.last_name}}</p>
+                        <br>
+                        <p>{% trans 'Phone number: ' %}{{user.phone}}</p>
+                        <br>
+                        <p>{% trans 'Experience: ' %}{{user.driver.experience}}</p>
+                        <br>
+                        <p>{% trans 'Birthday: ' %}{{user.driver.birthday}}</p>
+                        <br>
+                        
+                        <br><br>   
+                        <a href="{% url 'bus_registration' %}" class="btn btn-outline-warning"> Add bus</a>    
+                        <a href="{% url 'trip_driver' %}" class="btn btn-outline-warning"> Add Trip</a>    
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+    <!-- <div class="feature wow fadeInUp" data-wow-delay="0.2s">
+      <div class="container">
+          <div class="cow align-items-center">
+              <div class="col-lg-14 col-md-12">
+                  <div class="feature-item">
+
+                      <div class="feature-text" >
+                        <img class="rounded-circle" src="{{user.driver.image.url}}" alt="{{user.username}}">
+                        <p>{% trans 'Username: ' %}{{bus.name}}</p>
+                        <br>
+                        <p>{{user.first_name}} {{user.last_name}}</p>
+                        <br>
+                        <p>{% trans 'Phone number: ' %}{{user.phone}}</p>
+                        <br>
+                        <p>{% trans 'Experience: ' %}{{user.driver.experience}}</p>
+                        <br>
+                        <p>{% trans 'Birthday: ' %}{{user.driver.birthday}}</p>
+                        <br>
+                        
+                        <br><br>   
+                        <a href="{% url 'bus_registration' %}" class="btn btn-outline-warning"> Add bus</a>    
+                        <a href="{% url 'trip_driver' %}" class="btn btn-outline-warning"> Add Trip</a>    
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>  -->
+    <table>
+      <thead>
+        <tr>
+          <th>bus name</th>
+          <th>code</th>
+          <th>number</th>
+          <th>color</th>
+          <th>seats</th>
+          <th>conditoner</th>
+          <th>image</th>
+          <th>{{request.user.driver.}}</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for item in bus %}
+      <tr>
+        <td>{{item.driver.bus}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+    </table>
+    {% else %}
+    <div class="feature wow fadeInUp" data-wow-delay="0.2s">
+      <div class="container">
+          <div class="cow align-items-center">
+              <div class="col-lg-14 col-md-12">
+                  <div class="feature-item">
+                      <div class="feature-text" >
+                          <p>{% trans 'Username:' %} {{user.username}}</p>
+                          <br>
+                          <p>{{user.first_name}} {{user.last_name}}</p>
+                          <br>
+                          <p>{% trans 'Phone number:' %} {{user.phone}}</p>
+                          <br> 
+                          <a href="{% url 'driver_registration' %}" class="btn btn-outline-warning"> Registration for driver</a> 
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>           
+
+    {% endif %}
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'user/lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'user/lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'user/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'user/lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'user/lib/lightbox/js/lightbox.min.js' %}"></script>
+<script src="{% static 'user/lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'user/lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'user/lib/slick/slick.min.js' %}"></script>
+<script src="{% static 'user/js/orderJS.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'user/js/main.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+
+    <title>User Registration</title>
+
+    <link href="{% static 'user/img/favicon.ico' %}" rel="icon">
+    
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="{% static 'user/lib/flaticon/font/flaticon.css' %}" rel="stylesheet"> 
+<link href="{% static 'user/lib/animate/animate.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/lib/slick/slick.css' %}" rel="stylesheet">
+<link href="{% static 'user/lib/slick/slick-theme.css' %}" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link href="{% static 'user/css/style.css' %}" rel="stylesheet" type="text/css">   
+</head>
+<body style="background-color: #fdbe33;">
+
+
+
+            <!-- Contact Start -->
+            <div class="contact wow fadeInUp">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p></p>
+                        <h2>Registration</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="flaticon-address"></i>
+                                    <div class="contact-text">
+                                        <h2>Location</h2>
+                                        <p>Students Street, Tashkent, Uzbekistan</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="flaticon-call"></i>
+                                    <div class="contact-text">
+                                        <h2>Phone</h2>
+                                        <p>+998 93 516-68-66</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="flaticon-send-mail"></i>
+                                    <div class="contact-text">
+                                        <h2>Email</h2>
+                                        <p>tripuz@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-form">
+                                <div id="success"></div>
+                                <form method="POST" name="sentMessage" id="contactForm" novalidate="novalidate">
+                                    {% csrf_token %}
+                                    <div class="control-group">
+                                        <!-- <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> -->
+                                        {{ form.username }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> -->
+                                        {{ form.first_name }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" /> -->
+                                        {{ form.last_name }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+                                        {{ form.phone }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+                                        {{ form.password1 }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea> -->
+                                        {{ form.password2 }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'user/lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'user/lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'user/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'user/lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'user/lib/lightbox/js/lightbox.min.js' %}"></script>
+<script src="{% static 'user/lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'user/lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'user/lib/slick/slick.min.js' %}"></script>
+<script src="{% static 'user/js/orderJS.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'user/js/main.js' %}"></script>
+</body>
+</html>

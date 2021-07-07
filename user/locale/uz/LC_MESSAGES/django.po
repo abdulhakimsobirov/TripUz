@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-16 16:17+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\user\templates\home.html:65
+msgid "Opening Hour"
+msgstr "Ishlash vaqti"
+
+#: .\user\templates\home.html:66
+msgid "Mon - Sat, 8:00 - 9:00"
+msgstr "Dushanba - Shanba, 8:00 - 9:00"
+
+#: .\user\templates\home.html:76
+msgid "Call Us"
+msgstr "Biz bilan aloqa"
+
+#: .\user\templates\home.html:87
+msgid "Email Us"
+msgstr "Email"
+
+#: .\user\templates\home.html:111
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\user\templates\home.html:114
+msgid "Start Journey"
+msgstr "Yo'nalishlar"
+
+#: .\user\templates\home.html:116
+msgid "Map"
+msgstr "Xarita"
+
+#: .\user\templates\home.html:119
+msgid "Contact"
+msgstr "Biz Bilan"
+
+#: .\user\templates\home.html:121
+msgid "Languages"
+msgstr "Til"
+
+#: .\user\templates\home.html:123
+msgid "English"
+msgstr "Inglizcha"
+
+#: .\user\templates\home.html:124
+msgid "Uzbek"
+msgstr "O'zbekcha"
+
+#: .\user\templates\home.html:135
+msgid "Logout"
+msgstr "Tizimdan chiqish"
+
+#: .\user\templates\home.html:137
+msgid "Log-in"
+msgstr "Tizimgakirish"
+
+#: .\user\templates\home.html:159
+msgid "We Are Professional"
+msgstr "Professional Xodimlar"
+
+#: .\user\templates\home.html:160
+msgid "For Your Dream Travel"
+msgstr "Siz Uchun Orzuingizdagi Sayohat"
+
+#: .\user\templates\home.html:168
+msgid "Professional Driver"
+msgstr "Yuqori Malakali Haydovchilar"
+
+#: .\user\templates\home.html:169
+msgid "Good Drivers In Every Way"
+msgstr "Hush Muomala Haydovchilar Har Bir Yonalishda"
+
+#: .\user\templates\home.html:177
+msgid "Best Pay"
+msgstr "To'lov Usullari"
+
+#: .\user\templates\home.html:178
+msgid "Convenient Payment Service For You"
+msgstr "Siz Uchun Eng Yaxshi To'lov Usuli"
+
+#: .\user\templates\home.html:206
+msgid "Expert Drivers"
+msgstr "Eng yaxshi haydovchilar"
+
+#: .\user\templates\home.html:207
+msgid "each of our employees treats their work with kindness"
+msgstr "Har bir Xodim oz ishiga mehr bilan yondoshadi"
+
+#: .\user\templates\home.html:217
+msgid "Quality Work"
+msgstr "Sifatli Ish"
+
+#: .\user\templates\home.html:218
+msgid "we guarantee for each of our work"
+msgstr "Biz har bish ishimizga javob beramiz"
+
+#: .\user\templates\home.html:228
+msgid "Comfort on board"
+msgstr "Ko'p qulayliklar"
+
+#: .\user\templates\home.html:229
+msgid ""
+"Our buses are equipped with large and comfortable seats, a toilet, Wi-Fi and "
+"power outlets."
+msgstr ""
+"Bizning avtobuslarimizda mijozlar uchun qulay o'rindiqlar, xojatxona va "
+"tekin Wi-FI mavjud"
+
+#: .\user\templates\home.html:250
+msgid "Welcome to Trip Uz"
+msgstr "Trip Uzga Xush Kelibsiz"
+
+#: .\user\templates\home.html:251
+msgid "6 Years Experience"
+msgstr "6 yilik tajriba"
+
+#: .\user\templates\home.html:265
+msgid "Learn More"
+msgstr "Ko'proq"
+
+#: .\user\templates\home.html:286
+msgid "Expert Workers"
+msgstr "Eng yaxshi ishchilar"
+
+#: .\user\templates\home.html:295
+msgid "Happy Clients"
+msgstr "Quvnoq Mijozlar"
+
+#: .\user\templates\home.html:308
+msgid "Completed Trips"
+msgstr "Bajarilgan sayohatlar"
+
+#: .\user\templates\home.html:317
+msgid "Running Trips"
+msgstr "Bajarilayotgan Sayohatlar"
+
+#: .\user\templates\home.html:551
+msgid "Frequently Asked Question"
+msgstr "Ko'p so'raladigan savollar"
+
+#: .\user\templates\home.html:552
+msgid "You May Ask"
+msgstr "Siz sorashingiz mumkin "
+
+#: .\user\templates\home.html:837
+#, fuzzy
+#| msgid "Contact"
+msgid "Manzil"
+msgstr "Biz Bilan"
+
+#: .\user\templates\home.html:838
+msgid "Students Street, Tashkent, Uzbekistan"
+msgstr "Talabalar Ko'chasi, Toshkent, O'zbekiston"
+
+#: .\user\templates\home.html:852
+msgid "Services Areas"
+msgstr "Bizning Servislar"
+
+#: .\user\templates\home.html:853 .\user\templates\user\map.html:42
+msgid "Building Construction"
+msgstr "Tamirlash Ishlari"
+
+#: .\user\templates\home.html:854
+msgid "Interior Design"
+msgstr "Interyer dizayn"
+
+#: .\user\templates\home.html:859
+msgid "Useful Pages"
+msgstr "Foydali"
+
+#: .\user\templates\home.html:860 .\user\templates\user\contact.html:27
+#: .\user\templates\user\contact.html:31
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Biz Bilan"
+
+#: .\user\templates\home.html:861
+msgid "Our Team"
+msgstr "Bizning Jamoa"
+
+#: .\user\templates\home.html:862
+msgid "Projects"
+msgstr "Bizning loyihalar"
+
+#: .\user\templates\home.html:863
+msgid "Testimonial"
+msgstr "Guvohlik"
+
+#: .\user\templates\home.html:868
+msgid "Newsletter"
+msgstr "Fikrlar"
+
+#: .\user\templates\home.html:870
+msgid ""
+"Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur "
+"facilisis ornare velit non vulpu"
+msgstr ""
+"Trip Uz O'zbekistondagi birinchi avtomatlashtirilgan uzoq yo'lga yuruvchi "
+"avtobuslar"
+
+#: .\user\templates\home.html:874
+msgid "Submit"
+msgstr "Jo'anitish"
+
+#: .\user\templates\home.html:882
+msgid "Terms of use"
+msgstr "Xodimlar"
+
+#: .\user\templates\home.html:883
+msgid "Privacy policy"
+msgstr ""
+
+#: .\user\templates\home.html:884
+msgid "Cookies"
+msgstr ""
+
+#: .\user\templates\home.html:885
+msgid "Help"
+msgstr "Yordam"
+
+#: .\user\templates\home.html:892
+msgid " All Right Reserved."
+msgstr "Xizmatlar litsenziyaga ega"
+
+#: .\user\templates\home.html:895
+msgid "Designed By"
+msgstr "Loyiha Yaratuvchisi:"
+
+#: .\user\templates\profile.html:31
+msgid "User Profile"
+msgstr "Foydalanuvhi bOLimi"
+
+#: .\user\templates\profile.html:44
+msgid "Username: "
+msgstr "Foydalanuvhi nomi"
+
+#: .\user\templates\profile.html:48
+msgid "Phone number: "
+msgstr " Telefon raqam"
+
+#: .\user\templates\profile.html:50
+#, fuzzy
+#| msgid "6 Years Experience"
+msgid "Experience: "
+msgstr "6 yilik tajriba"
+
+#: .\user\templates\profile.html:52
+msgid "Birthday: "
+msgstr "Tug'ilgan kuni:"
+
+#: .\user\templates\profile.html:72
+msgid "Username:"
+msgstr "Foydalanuvhi nomi"
+
+#: .\user\templates\profile.html:76
+msgid "Phone number:"
+msgstr "Telefon raqam:"
+
+#: .\user\templates\user\contact.html:43
+msgid "Get In Touch"
+msgstr ""
+
+#: .\user\templates\user\contact.html:44
+msgid "For Any Query"
+msgstr ""
+
+#: .\user\templates\user\contact.html:52
+msgid "Location"
+msgstr "Joylashuv"
+
+#: .\user\templates\user\contact.html:59
+msgid "Phone"
+msgstr "telefon raqam"
+
+#: .\user\templates\user\contact.html:66
+#, fuzzy
+#| msgid "Email Us"
+msgid "Email"
+msgstr "Email"
+
+#: .\user\templates\user\driver\bus_registration.html:7
+msgid "Divers registration"
+msgstr "Haydovchilar uchunn Ro'yxatdan o'tish"
+
+#: .\user\templates\user\driver\bus_registration.html:13
+msgid "Avtobusni Ro'yxatdan o'kazish"
+msgstr ""
+
+#: .\user\templates\user\map.html:5
+msgid "  "
+msgstr ""
+
+#: .\user\templates\user\map.html:11
+msgid "This is map Page"
+msgstr "Bu Xarita Bo'limi"
+
+#: .\user\templates\user\map.html:14
+#, fuzzy
+#| msgid "Our Team"
+msgid "Our Map"
+msgstr "Bizning Jamoa"
+
+#: .\user\templates\user\map.html:26
+#, fuzzy
+#| msgid "Services Areas"
+msgid "Our Services"
+msgstr "Bizning Servislar"
+
+#: .\user\templates\user\map.html:27
+msgid "We Provide Services"
+msgstr ""
+
+#: .\user\templates\user\map.html:37
+#, fuzzy
+#| msgid ""
+#| "Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur "
+#| "facilisis ornare velit non vulpu"
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec "
+"pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus "
+"tortor, auctor id gravida condimentum, viverra quis sem."
+msgstr ""
+"Trip Uz O'zbekistondagi birinchi avtomatlashtirilgan uzoq yo'lga yuruvchi "
+"avtobuslar"
+
+#~ msgid "Cities"
+#~ msgstr "Shaharlar"
+
+#~ msgid "Districts"
+#~ msgstr "Tumanlar"
+
+#~ msgid "For Driver"
+#~ msgstr "Haydovchilar uchun"
+
+#~ msgid "Comments"
+#~ msgstr "Kommentariyalar"
+
+#~ msgid "News"
+#~ msgstr "Yangiliklar"
+
+#~ msgid "About me"
+#~ msgstr "Biz haqimizda"

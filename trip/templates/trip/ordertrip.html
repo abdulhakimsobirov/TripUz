@@ -1,0 +1,144 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+
+<html lang="en">
+<head>
+    <title>Order Trip</title>
+<style>
+        body {
+            background-color: #fdbe33;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px
+        }
+
+        .c-details span {
+            font-weight: 300;
+            font-size: 13px
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 39px
+        }
+
+        .badge span {
+            background-color: #fffbec;
+            width: 60px;
+            height: 25px;
+            padding-bottom: 3px;
+            border-radius: 5px;
+            display: flex;
+            color: #fed85d;
+            justify-content: center;
+            align-items: center
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 10px
+        }
+
+        .progress div {
+            background-color: #fdbe33
+        }
+
+        .text1 {
+            font-size: 14px;
+            font-weight: 600
+        }
+
+        .text2 {
+            color: #a5aec0
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 mb-1">
+        <form method="GET">
+            {{ tfilter.form | crispy }}
+            <button class="btn btn-primary" >{% trans 'Search' %}</button>
+
+        </form>
+    </div>
+<!---------------------------------------------------------------------------------->
+{%for item in ordertrip%}
+<div class="feature wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-12 col-md-12">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="flaticon-worker"></i>
+                    </div>
+                    <div class="feature-text">
+                        <div class="ms-2 c-details">
+                            <h3 class="mb-0">{% trans 'Driver:' %} {{item.driver}}</h3><br>
+                        </div>
+                        <h3 class="heading">{{item.departure}} - {{item.arrival}}</h3>
+                        <h3>{% trans 'Departure Time:' %} {{item.datatime}}</h3>
+                        <h3>{% trans 'Price:' %} {{item.price}} sum</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="mt-3"> <span class="text1">{% trans 'have 32 seats' %} <span class="text2"> of {{item.seats}} seats</span></span> </div> 
+                        <button type="button" style="background-color: #fdbe33;" class="btn btn-toolbar" data-toggle="modal" data-target="#modalPush">{% trans 'Submit' %}</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- -----------------------------------MODAL---------------------------------- -->
+  
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <div class="modal-content text-center">
+        <div class="modal-header d-flex justify-content-center">
+          
+        
+        <!-- <div class="modal-body">
+          <i class="fas fa-bell fa-4x animated rotateIn mb-4"></i>
+          <p>Do you want to receive the push notification about the newest posts?</p>
+        </div> -->
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ mytrip|crispy }}
+            <input type="submit" class="btn btn-warning" value="Submit">
+        </form>
+        <!-- <div class="modal-footer flex-center">
+          <a href="" class="btn btn-warning">Yes</a>
+          <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">No</a>
+        </div> -->
+    </div>
+      </div>
+    </div>
+  </div> 
+
+
+</body>
+</html>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+    <title>Trip Drivers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+       
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <!-- Favicon -->
+        <link href="{% static 'passengers/img/favicon.ico' %}" rel="icon">
+    
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'user/lib/flaticon/font/flaticon.css' %}" rel="stylesheet"> 
+        <link href="{% static 'user/lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'user/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'user/lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'user/lib/slick/slick.css' %}" rel="stylesheet">
+        <link href="{% static 'user/lib/slick/slick-theme.css' %}" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="{% static 'user/css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: #fdbe33;">
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="{{ message.tags }} alert-dismissble mt-4">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}    
+    </div>
+
+    <div class="feature wow fadeInUp" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="cow align-items-center">
+                <div class="col-lg-24 col-md-12">
+                    <div class="feature-item">
+
+                        <div class="feature-text" style="color: #fdbe33;">
+
+                            <h1 style="color: #fdbe33;">Create Trip</h1>
+                            <form method="POST">
+                                {% csrf_token %}
+
+                                {{ tripform.departure | as_crispy_field }}
+                                {{ tripform.arrival | as_crispy_field }}
+                                <div id="div_id_bus" class="form-group"> <label for="id_bus" class=" requiredField">
+                                        Bus<span class="asteriskField">*</span> </label>
+                                    <div class=""> <select name="bus" class="select form-control" required="" id="id_bus">
+                                            <option value="" selected="">---------</option>
+                                            {% for object in buses %}
+                                                <option value="{{object.id}}">{{object}}</option>
+                                            {% endfor %}
+                                        </select> </div>
+                                </div>
+                                {{ tripform.datatime | as_crispy_field }}
+                                {{ tripform.seats | as_crispy_field }}
+                                {{ tripform.status | as_crispy_field }}
+                                {{ tripform.price | as_crispy_field }}
+                                <input type="submit" value="Submit" class="btn btn-warning">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+    
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'user/lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'user/lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'user/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'user/lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'user/lib/lightbox/js/lightbox.min.js' %}"></script>
+<script src="{% static 'user/lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'user/lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'user/lib/slick/slick.min.js' %}"></script>
+<script src="{% static 'user/js/orderJS.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'user/js/main.js' %}"></script>
+</body>
+
+</html>
